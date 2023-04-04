@@ -1,0 +1,13 @@
+.main_container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menu {
+  border: 2px solid black;
+  display: flex;
+
+    .logo {
+      height: 50%;
+    }
+}
