@@ -1,13 +1,40 @@
 .main_container {
-  max-width: 800px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
 .menu {
+
   border: 2px solid black;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 100px;
 
     .logo {
       height: 50%;
+    }
+
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        margin: 0 5%;
+      }
+    }
+
+    .menu_right {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      max-height: 300px;
+
+        .cart {
+        max-height: 20%;
+        }
+
+        .avatar {
+          max-height: 50px;
+        }
     }
 }
