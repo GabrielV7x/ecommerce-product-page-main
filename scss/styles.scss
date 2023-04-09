@@ -124,5 +124,58 @@
       text-decoration: line-through;
       margin-bottom: 9%;
     }
+
+    .add_to_cart_container {
+      display: flex;
+      align-items: center;
+
+      .cart_update {
+        display: flex;
+        max-width: 108px;
+        align-items: center;
+        background-color: hsl(223, 64%, 98%);
+        padding: 10px 10px;
+        border-radius: 10px;
+
+        .minus {
+          display: inline;
+          height: 28px;
+          color: hsl(26, 100%, 55%);
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+
+        .zero {
+          margin: 0 28px;
+          font-weight: 700;
+        }
+
+        .plus{
+      display: inline;
+      height: 28px;
+      color: hsl(26, 100%, 55%);
+      font-size: 1.2rem;
+      font-weight: 700;
+        }
+      }
+    }
+
+    .button_add_to_cart{
+      display: flex;
+      background-color: hsl(26, 100%, 55%);
+      color: white;
+      padding: 15px 55px;
+      border-radius: 10px;
+      font-weight: 700;
+      margin-left: 5%;
+
+      .cart2 {
+        color: white;
+        margin-right: 15px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
   }
 }
