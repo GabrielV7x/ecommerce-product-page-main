@@ -67,3 +67,38 @@
   max-height: 80px;
   border-radius: 10px;
 }
+.product_container .prodcut_details h2 {
+  color: hsl(26, 100%, 55%);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 10% 0 5.5% 0;
+}
+.product_container .prodcut_details h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5%;
+}
+.product_container .prodcut_details p {
+  color: hsl(219, 9%, 45%);
+  margin-bottom: 7%;
+}
+.product_container .prodcut_details .price_container {
+  display: flex;
+  margin-bottom: 4%;
+}
+.product_container .prodcut_details .price_container .price_dollar {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-right: 14px;
+}
+.product_container .prodcut_details .price_container .price_right {
+  color: hsl(26, 100%, 55%);
+  padding: 2px 4px;
+  background-color: hsl(25, 100%, 94%);
+  border-radius: 5px;
+}
+.product_container .prodcut_details .stricked_price {
+  color: hsl(220, 14%, 75%);
+  font-weight: 700;
+  text-decoration: line-through;
+  margin-bottom: 9%;
+}

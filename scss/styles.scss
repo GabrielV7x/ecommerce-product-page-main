@@ -81,4 +81,48 @@
       }
     }
   }
+
+  .prodcut_details {
+    h2 {
+      color: hsl(26, 100%, 55%);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin: 10% 0 5.5% 0;
+    }
+
+    h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5%;
+    }
+
+    p {
+      color:  hsl(219, 9%, 45%);
+      margin-bottom: 7%;
+    }
+
+    .price_container {
+      display: flex;
+      margin-bottom: 4%;
+
+      .price_dollar {
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-right: 14px;
+      }
+
+      .price_right {
+        color: hsl(26, 100%, 55%);
+        padding: 2px 4px;
+        background-color: hsl(25, 100%, 94%);
+        border-radius: 5px;
+      }
+    }
+
+    .stricked_price {
+      color: hsl(220, 14%, 75%);
+      font-weight: 700;
+      text-decoration: line-through;
+      margin-bottom: 9%;
+    }
+  }
 }
