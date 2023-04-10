@@ -59,11 +59,19 @@
 
       .cart {
       max-height: 20%;
+      cursor: pointer;
       }
 
       .avatar {
         max-height: 48px;
         margin-left: 9%;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 50%;
+      }
+
+      .avatar:hover {
+        border: 2px solid hsl(26, 100%, 55%);
       }
     }
 }
