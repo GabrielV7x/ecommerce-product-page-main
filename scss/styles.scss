@@ -37,7 +37,7 @@
           cursor: pointer;
         }
 
-        li:after {
+        li.show_li:after {
           content: "";
           display: block;
           height: 3px;
