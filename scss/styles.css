@@ -59,6 +59,7 @@
   cursor: pointer;
 }
 .menu .menu_right div div.cart_popup {
+  display: none;
   position: absolute;
   top: 55px;
   left: -120px;
