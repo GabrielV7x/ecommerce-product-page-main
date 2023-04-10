@@ -26,11 +26,28 @@
       display: flex;
       flex-grow: 2;
 
-      li {
-        list-style: none;
+
+      div {
         margin: 0 3.5%;
-        color: gray;
+
+        li {
+          list-style: none;
+          color: gray;
+          position: relative;
+          cursor: pointer;
+        }
+
+        li:after {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 100%;
+          background-color: hsl(26, 100%, 55%);
+          position: absolute;
+          bottom: -42px;
+        }
       }
+
     }
 
     .menu_right {
