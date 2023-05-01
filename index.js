@@ -1,8 +1,7 @@
 // menu hover
-const lis =[...document.querySelectorAll("li")] ;
+const lis =[...document.querySelectorAll("li")] ; //menu items
 
 const menuAnimation = (li) => {
-
   li.addEventListener("mouseenter", function() {
     li.classList.add("show_li");
   });
@@ -15,9 +14,10 @@ const menuAnimation = (li) => {
 lis.forEach(menuAnimation);
 
 
+
 // Cart popup animation
-const cart = document.querySelector(".cart");
-const cartPopup = document.querySelector(".cart_popup");
+const cart = document.querySelector(".cart"); // top right cart icon
+const cartPopup = document.querySelector(".cart_popup"); // popup visible onclick of the cart icon
 
 const cartPopupShow = (cart, cartPopup) => {
   cart.addEventListener("click", function() {
@@ -31,3 +31,19 @@ const cartPopupShow = (cart, cartPopup) => {
 };
 
 cartPopupShow(cart,cartPopup);
+
+
+//  change the main img according to the thumbnials selected
+
+const mainImg = document.querySelector(".main_image img[src]");
+const thumbnails = [...document.querySelectorAll(".thumbnails img[src]")];
+
+function becomeMainImg(img) {
+  img.addEventListener("click", function() {
+    imgAttrValue = img.getAttribute("src");
+    mainImgAttrValue = mainImg.setAttribute("src", imgAttrValue)
+    console.log(mainImgAttrValue);
+  })
+}
+
+thumbnails.forEach(becomeMainImg)
