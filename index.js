@@ -41,8 +41,8 @@ const thumbnails = [...document.querySelectorAll(".thumbnails img[src]")];
 function becomeMainImg(img) {
   img.addEventListener("click", function() {
     imgAttrValue = img.getAttribute("src");
-    mainImgAttrValue = mainImg.setAttribute("src", imgAttrValue)
-    console.log(mainImgAttrValue);
+    const bigImgPath = imgAttrValue.replace("-thumbnail", "");
+    mainImgAttrValue = mainImg.setAttribute("src", bigImgPath)
   })
 }
 
