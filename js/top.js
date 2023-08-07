@@ -1,3 +1,6 @@
+
+export function menu() {
+
 // menu hover
 const lis =[...document.querySelectorAll("li")] ; //menu items
 
@@ -32,18 +35,6 @@ const cartPopupShow = (cart, cartPopup) => {
 
 cartPopupShow(cart,cartPopup);
 
-
-//  change the main img according to the thumbnials selected
-
-const mainImg = document.querySelector(".main_image img[src]");
-const thumbnails = [...document.querySelectorAll(".thumbnails img[src]")];
-
-function becomeMainImg(img) {
-  img.addEventListener("click", function() {
-    imgAttrValue = img.getAttribute("src");
-    const bigImgPath = imgAttrValue.replace("-thumbnail", "");
-    mainImgAttrValue = mainImg.setAttribute("src", bigImgPath)
-  })
 }
 
-thumbnails.forEach(becomeMainImg)
+export default menu;
