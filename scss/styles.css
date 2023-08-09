@@ -103,6 +103,22 @@
   position: relative;
   width: 80px;
 }
+.product_container .product_images .thumbnails div.mainImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid hsl(26, 100%, 55%); /* Border properties */
+  opacity: 1; /* Set the opacity for the border */
+  pointer-events: none; /* Make sure the border doesn't interfere with interactions */
+  box-sizing: border-box; /* Ensure the border width doesn't affect the image dimensions */
+  cursor: pointer;
+  border-radius: 10px;
+  height: 80px;
+  z-index: 1;
+}
 .product_container .product_images .thumbnails div img.thumb_img {
   max-height: 80px;
   border-radius: 10px;
@@ -110,18 +126,6 @@
 }
 .product_container .product_images .thumbnails div img.thumb_img:hover {
   opacity: 0.5;
-}
-.product_container .product_images .thumbnails div img.thumb_img.mainImg {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px solid hsl(26, 100%, 55%); /* Border properties */
-  opacity: 1; /* Set the opacity for the border */
-  pointer-events: none; /* Make sure the border doesn't interfere with interactions */
-  box-sizing: border-box; /* Ensure the border width doesn't affect the image dimensions */
 }
 .product_container .prodcut_details h2 {
   color: hsl(26, 100%, 55%);

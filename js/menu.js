@@ -1,6 +1,5 @@
 
-export function menu() {
-
+export default function menu() {
 // menu hover
 const lis =[...document.querySelectorAll("li")] ; //menu items
 
@@ -15,8 +14,6 @@ const menuAnimation = (li) => {
 };
 
 lis.forEach(menuAnimation);
-
-
 
 // Cart popup animation
 const cart = document.querySelector(".cart"); // top right cart icon
@@ -34,7 +31,4 @@ const cartPopupShow = (cart, cartPopup) => {
 };
 
 cartPopupShow(cart,cartPopup);
-
 }
-
-export default menu;
