@@ -110,12 +110,14 @@
         padding: 10px 10px;
         border-radius: 10px;
 
+
         .minus {
           display: inline;
           height: 28px;
           color: hsl(26, 100%, 55%);
           font-size: 1.2rem;
           font-weight: 700;
+          cursor: pointer;
         }
 
         .zero {
@@ -124,16 +126,17 @@
         }
 
         .plus{
-      display: inline;
-      height: 28px;
-      color: hsl(26, 100%, 55%);
-      font-size: 1.2rem;
-      font-weight: 700;
+          display: inline;
+          height: 28px;
+          color: hsl(26, 100%, 55%);
+          font-size: 1.2rem;
+          font-weight: 700;
+          cursor: pointer;
         }
       }
     }
 
-    .button_add_to_cart{
+    .button_add_to_cart {
       display: flex;
       background-color: hsl(26, 100%, 55%);
       color: white;
@@ -141,6 +144,12 @@
       border-radius: 10px;
       font-weight: 700;
       margin-left: 5%;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+        box-shadow: 0px 20px 40px 10px hsl(25, 100%, 94%);
+      }
 
       .cart2 {
         color: white;
