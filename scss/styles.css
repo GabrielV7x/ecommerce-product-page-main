@@ -125,7 +125,7 @@
   cursor: pointer;
 }
 .product_container .product_images .thumbnails div img.thumb_img:hover {
-  opacity: 0.5;
+  opacity: 0.5 !important;
 }
 .product_container .prodcut_details h2 {
   color: hsl(26, 100%, 55%);
