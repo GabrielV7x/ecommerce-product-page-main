@@ -4,7 +4,6 @@ export default function product() {
   const mainImg = document.querySelector(".main_image img[src]");
   // const thumbContainers = [...document.querySelectorAll(".thumbnails div")];
   const thumbnails = [...document.querySelectorAll(".thumbnails img[src]")];
-  console.log(thumbnails);
 
   function becomeMainImg(img) {
     img.addEventListener("click", function() {
@@ -24,4 +23,27 @@ export default function product() {
   }
 
   thumbnails.forEach(becomeMainImg)
+
+
+
+  // Increment/Decrement the quantity of the product
+  const updateCart = () => {
+    const minus = document.querySelector(".prodcut_details .add_to_cart_container .minus");
+    const plus = document.querySelector(".prodcut_details .add_to_cart_container .plus");
+    const numOfItem = document.querySelector(".prodcut_details .add_to_cart_container .zero");
+    let sum = 0;
+
+    minus.addEventListener("click", function() {
+      sum = sum - 1;
+      console.log(sum);
+      numOfItem.innerHTML = sum;
+    })
+
+    plus.addEventListener("click", function() {
+      sum = sum + 1;
+      console.log(sum);
+      numOfItem.innerHTML = sum;
+    })
+  }
+  updateCart();
 }
