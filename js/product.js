@@ -46,4 +46,12 @@ export default function product() {
     })
   }
   updateCart();
+
+  // Add the product to the cart
+  const addToCartBtn = document.querySelector(".prodcut_details .add_to_cart_container .button_add_to_cart");
+  function addToCart() {
+    const addToCartBtn = document.querySelector(".prodcut_details .add_to_cart_container .button_add_to_cart");
+    console.log(addToCartBtn);
+  }
+  addToCartBtn.addEventListener("click", addToCart);
 }
