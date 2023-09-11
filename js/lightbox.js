@@ -1,9 +1,5 @@
-// function test() {
-//   console.log("tesyt");
-// }
-
+//  Open the modal with the image clicked
 function openModal() {
-  //  Open the modal with the image clicked
   const mainImg = document.querySelector(".product_container .main_image img[src]");
   const mainImgSrc = mainImg.getAttribute("src");
   let mainImgLBox = document.querySelector("#myModal .main_image img[src]");
@@ -15,7 +11,6 @@ function openModal() {
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
-
 
 //  change the main img according to the thumbnails selected
 const thumbnailsLBox = [...document.querySelectorAll("#myModal .thumbnails img[src]")];
@@ -39,3 +34,37 @@ function becomeMainImg(img) {
 }
 
 thumbnailsLBox.forEach(becomeMainImg)
+
+// Lightbox buttons to change the image
+let slideIndex = 1;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+
+}
+
+function showSlides(n) {
+  let thumbObj = {}
+  const thumbnailsLBox = [...document.querySelectorAll("#myModal .thumbnails img[src]")];
+
+  thumbnailsLBox.forEach(function(thumbnail, index) {
+    // thumbObj[index] = thumbnail;
+    index += 1;
+    thumbObj[index] = thumbnail.getAttribute("src").replace("-thumbnail", "");
+    thumbnail.parentNode.classList.remove("mainImg");
+    console.log(thumbnailsLBox.length);
+
+    if (n > thumbnailsLBox.length) {
+      n = 1
+    } else if (n < 1) {
+      n = thumbnailsLBox.length
+    }
+
+    if (n === index) {
+      slideIndex = n;
+      const mainImgLBox = document.querySelector("#myModal .main_image img[src]");
+      mainImgLBox.setAttribute("src", thumbObj[slideIndex]);
+      thumbnail.parentNode.classList.add("mainImg");
+    }
+
+  })
+}
