@@ -27,8 +27,6 @@ function becomeMainImg(img) {
     const imgAttrValue = img.getAttribute("src"); // get the src attribute value of the thumbnail
     const bigImgPath = imgAttrValue.replace("-thumbnail", "");
     const mainImgAttrValue = mainImgLBox.setAttribute("src", bigImgPath)
-
-    // img.style.opacity = "0.3";
     img.parentNode.classList.add("mainImg"); // add the mainImg class to the thumbnail clicked
   })
 }
@@ -39,7 +37,6 @@ thumbnailsLBox.forEach(becomeMainImg)
 let slideIndex = 1;
 function plusSlides(n) {
   showSlides(slideIndex += n);
-
 }
 
 function showSlides(n) {
@@ -47,7 +44,6 @@ function showSlides(n) {
   const thumbnailsLBox = [...document.querySelectorAll("#myModal .thumbnails img[src]")];
 
   thumbnailsLBox.forEach(function(thumbnail, index) {
-    // thumbObj[index] = thumbnail;
     index += 1;
     thumbObj[index] = thumbnail.getAttribute("src").replace("-thumbnail", "");
     thumbnail.parentNode.classList.remove("mainImg");
