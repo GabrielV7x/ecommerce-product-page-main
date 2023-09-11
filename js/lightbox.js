@@ -3,6 +3,12 @@
 // }
 
 function openModal() {
+  //  Open the modal with the image clicked
+  const mainImg = document.querySelector(".product_container .main_image img[src]");
+  const mainImgSrc = mainImg.getAttribute("src");
+  let mainImgLBox = document.querySelector("#myModal .main_image img[src]");
+  mainImgLBox = mainImgLBox.setAttribute("src", mainImgSrc)
+
   document.getElementById("myModal").style.display = "flex";
 }
 
@@ -20,7 +26,6 @@ function closeModal() {
       thumbnailsLBox.forEach(function(thumbnail) { // remove the mainImg class from all the thumbnails
         thumbnail.parentNode.classList.remove("mainImg");
         thumbnail.style.opacity = "1";
-        console.log(thumbnail);
       })
 
       const imgAttrValue = img.getAttribute("src"); // get the src attribute value of the thumbnail
