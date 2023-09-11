@@ -63,7 +63,7 @@
     <div class="product_container">
 
       <div class="product_images">
-        <div class="main_image" onclick="test()">
+        <div class="main_image" onclick="openModal()">
           <img src="./images/image-product-1.jpg" alt="">
         </div>
 
@@ -130,11 +130,24 @@
 
   <!-- Lightbox -->
   <div id="myModal">
+    <div class="product_images">
+      <span class="close cursor" onclick="closeModal()">×</span>
+      <div class="main_image" onclick="test()">
+        <img src="./images/image-product-1.jpg" alt="">
+      </div>
 
+      <div class="thumbnails">
+        <!-- <div id="test"></div> -->
+        <div><img src="./images/image-product-1-thumbnail.jpg" class="thumb_img" alt=""></div>
+        <div><img src="./images/image-product-2-thumbnail.jpg" class="thumb_img" alt=""></div>
+        <div><img src="./images/image-product-3-thumbnail.jpg" class="thumb_img" alt=""></div>
+        <div><img src="./images/image-product-4-thumbnail.jpg" class="thumb_img" alt=""></div>
+      </div>
+    </div>
   </div>
 
 
-  <script src="js/lightbox.js"></script>
   <script src="js/index.js" type="module"></script>
+  <script src="js/lightbox.js"></script>
 </body>
 </html>

@@ -1,14 +1,13 @@
 export default function product() {
 
   //  change the main img according to the thumbnials selected
-  const mainImg = document.querySelector(".main_image img[src]");
+  const mainImg = document.querySelector(".product_container .main_image img[src]");
   // const thumbContainers = [...document.querySelectorAll(".thumbnails div")];
-  const thumbnails = [...document.querySelectorAll(".thumbnails img[src]")];
+  const thumbnails = [...document.querySelectorAll(".product_container .thumbnails img[src]")];
 
   function becomeMainImg(img) {
     img.addEventListener("click", function() {
       thumbnails.forEach(function(thumbnail) { // remove the mainImg class from all the thumbnails
-        console.log(thumbnail.parentNode);
         thumbnail.parentNode.classList.remove("mainImg");
         thumbnail.style.opacity = "1";
       })
