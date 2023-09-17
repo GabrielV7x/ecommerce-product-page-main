@@ -17,7 +17,7 @@
 
     .close {
       align-self: end;
-      color: white;
+      color: hsl(26, 100%, 55%);
       font-size: 35px;
       cursor: pointer;
     }
@@ -41,6 +41,10 @@
         user-select: none;
         -webkit-user-select: none;
         right: 94%;
+
+        &:hover {
+          color: hsl(26, 100%, 55%);
+        }
       }
 
       .next {
@@ -86,16 +90,13 @@
           height: 66px;
           z-index: 1;
           background-color: rgba(255, 255, 255, 0.8);
-      }
+        }
 
         img.thumb_img {
+          position: relative;
           max-height: 66px;
           border-radius: 10px;
           cursor: pointer;
-
-          &:hover {
-            // opacity: 0.5 !important;
-          }
         }
       }
     }
