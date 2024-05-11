@@ -82,13 +82,13 @@ export default function product() {
 
   const updateCartContent = (obj) => {
     // console.log(obj);
-    const cardContent = document.querySelector(".cart_content");
+    let cardContent = document.querySelector(".cart_content");
 
     // creating nodes
-    const productAdded = document.createElement("div");
-    const productAddedImg = document.createElement("div");
-    const productAddedText = document.createElement("div");
-    const binIcon = document.createElement("div");
+    let productAdded = document.createElement("div");
+    let productAddedImg = document.createElement("img");
+    let productAddedText = document.createElement("div");
+    let binIcon = document.createElement("img");
 
     // adding class to nodes
     productAdded.classList.add("cart-details");
@@ -96,10 +96,14 @@ export default function product() {
     productAddedText.classList.add("cart-details-text");
     binIcon.classList.add("cart-details-bin");
 
+    //adding data to nodes
+    console.log(productAddedImg);
+    productAddedImg.setAttribute("src", `${obj.img}`);
+    productAddedText.textContent = `${obj.name} ${obj.price} x ${obj.quantity} ${obj.total}`;
+    binIcon.setAttribute("src", "./images/icon-delete.svg");
 
+    // appending nodes to cart
     productAdded.append(productAddedImg, productAddedText, binIcon)
-
-
     cardContent.appendChild(productAdded)
   }
 }
