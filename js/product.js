@@ -56,6 +56,7 @@ export default function product() {
 
   // Add the product to the cart
   const addToCartBtn = document.querySelector(".prodcut_details .add_to_cart_container .button_add_to_cart");
+
   function addToCart() {
     const img = document.querySelector(".product_container .main_image img[src]").getAttribute("src").replace(".jpg", "-thumbnail.jpg");
     objProduct.img = img;
@@ -80,6 +81,25 @@ export default function product() {
   addToCartBtn.addEventListener("click", addToCart);
 
   const updateCartContent = (obj) => {
-    console.log(obj);
+    // console.log(obj);
+    const cardContent = document.querySelector(".cart_content");
+
+    // creating nodes
+    const productAdded = document.createElement("div");
+    const productAddedImg = document.createElement("div");
+    const productAddedText = document.createElement("div");
+    const binIcon = document.createElement("div");
+
+    // adding class to nodes
+    productAdded.classList.add("cart-details");
+    productAddedImg.classList.add("cart-details-img");
+    productAddedText.classList.add("cart-details-text");
+    binIcon.classList.add("cart-details-bin");
+
+
+    productAdded.append(productAddedImg, productAddedText, binIcon)
+
+
+    cardContent.appendChild(productAdded)
   }
 }

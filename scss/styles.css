@@ -70,6 +70,19 @@
   font-weight: 700;
   color: hsl(219, 9%, 45%);
 }
+.menu .menu_right div div.cart_popup .cart_content .cart-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+.menu .menu_right div div.cart_popup .cart_content .cart-details .cart-details img {
+  max-height: 48px;
+}
+.menu .menu_right div div.cart_popup .cart_content .cart-details .cart-details p {
+  margin: 0;
+}
 .menu .menu_right .avatar {
   max-height: 48px;
   margin-left: 9%;

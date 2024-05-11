@@ -77,7 +77,23 @@
             margin-top: 18%;
             font-size: 14px;
             font-weight: 700;
-            color: hsl(219, 9%, 45%)
+            color: hsl(219, 9%, 45%);
+
+            .cart-details {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              margin-top: 10px;
+              padding: 0 10px;
+
+              .cart-details img {
+                max-height: 48px;
+              }
+
+              .cart-details p {
+                margin: 0;
+              }
+            }
           }
         }
       }
